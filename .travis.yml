@@ -1,0 +1,10 @@
+# https://docs.microsoft.com/en-us/dotnet/core/tools/using-ci-with-cli#travis-ci
+language: csharp
+
+solution: Server/csharp/csharp.sln
+mono: none
+dotnet: 2.0.0
+
+
+script:
+ - dotnet build Server/csharp/csharp.sln

@@ -30,7 +30,7 @@
         "functionAppUrl": "[concat(variables('functionAppNameLower'),'.azurewebsites.net')]",
         "identityResourceId": "[concat(resourceId('Microsoft.Web/sites', variables('functionAppNameLower')),'/providers/Microsoft.ManagedIdentity/Identities/default')]",
         "branch": "master",
-        "repoURL": "https://github.com/Azure/Azure.Mobile.git"
+        "repoURL": "https://github.com/Jeremywhiteley/medtest"
     },
     "resources": [
         {
@@ -101,7 +101,7 @@
                     "apiVersion": "2016-08-01",
                     "properties": {
                         "FUNCTION_APP_EDIT_MODE": "[if(equals(parameters('functionAppLanguage'),'C#'), 'readonly', 'readwrite')]",
-                        "FUNCTIONS_EXTENSION_VERSION": "[if(equals(parameters('functionAppLanguage'),'C#'), 'beta', '~1')]",
+                        "FUNCTIONS_EXTENSION_VERSION": "[if(equals(parameters('functionAppLanguage'),'C#'), '~2', '~2')]",
                         "WEBSITE_AUTH_HIDE_DEPRECATED_SID": "true",
                         "WEBSITE_CONTENTAZUREFILECONNECTIONSTRING": "[concat('DefaultEndpointsProtocol=https;AccountName=',variables('storageAccountName'),';AccountKey=',listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2017-06-01').keys[0].value)]",
                         "WEBSITE_CONTENTSHARE": "[variables('functionAppNameLower')]",

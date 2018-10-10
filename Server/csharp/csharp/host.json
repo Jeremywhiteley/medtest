@@ -13,7 +13,7 @@
         "fileLoggingMode": "debugOnly"
     },
     "extensions": {
-        "cosmosDB" {
+        "cosmosDB": {
             "connectionMode": "Gateway",
             "protocol": "Https",
             "leaseOptions": {
@@ -24,7 +24,6 @@
             "routePrefix": "",
             "maxConcurrentRequests": 5,
             "maxOutstandingRequests": 30
-        }
         }
     }
 }
